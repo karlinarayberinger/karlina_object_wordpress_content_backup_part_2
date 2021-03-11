@@ -32,3 +32,17 @@ function generate_random_nonnegative_integer_less_than_one_hundred() {
  	}
 }
 
+function generate_random_binary_digit() {
+	try {
+		let random_nonnegative_integer_in_base_ten = 0;
+		let random_binary_digit = 0;
+		random_nonnegative_integer_in_base_ten =  generate_random_nonnegative_integer_less_than_one_hundred();
+		random_binary_digit = (random_nonnegative_integer_in_base_ten % 2); // Get the remainder of random_nonnegative_integer_in_base_ten divided by 2.
+		return random_binary_digit;
+	}
+	catch(error) {
+		console.log("An error during the runtime of generate_random_binary_digit(): " + error);
+ 		return 0;
+	}
+}
+

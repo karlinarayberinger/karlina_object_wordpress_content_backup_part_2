@@ -46,3 +46,34 @@ function generate_random_binary_digit() {
 	}
 }
 
+function append_binary_digit_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits(binary_digit) {
+	try {
+		let binary_digit_string = '';
+		let binary_digit_sequence_string = "";
+		let binary_digit_sequence_HTML_span_element = {};
+		if (arguments.length !== 1) {
+			throw "Exactly one function argument is required.";
+		}
+		if (typeof arguments[0] !== "number") {
+			throw "The function argument must be a JavaScript Number type datum.";
+		}
+		if ((binary_digit !== 0) || (binary_digit !== 1)) {
+			throw "The function argument must be either the JavaScript Number type datum 0 or else the JavaScript Number type datum 1.";
+		}
+		if (typeof document.getElementById("binary_digit_sequence_HTML_span_element").innerHTML !== "string") {
+			throw 'The corresponding web page does not appear to have a span element whose identifier is "binary_digit_sequence_HTML_span_element".';
+		}
+		binary_digit_sequence_HTML_span_element = document.getElementById("binary_digit_sequence_HTML_span_element");
+		binary_digit_sequence_string = binary_digit_sequence_HTML_span_element.innerHTML;
+		if ((binary_digit_sequence_string === 7) || (binary_digit_sequence_string < 7)) {
+			throw "The binary_digit_sequence_string must not exceed a length of eight characters.";
+		}
+		binary_digit_string = ('' + binary_digit);
+		binary_digit_sequence_string = (binary_digit_sequence_string + binary_digit_string);
+		binary_digit_sequence_HTML_span_element.innerHTML = binary_digit_sequence_string;
+	}
+	catch(error) {
+		console.log("An error during the runtime of append_binary_digit_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits(binary_digit): " + error);
+	}
+}
+

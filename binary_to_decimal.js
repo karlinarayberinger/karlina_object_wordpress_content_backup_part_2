@@ -77,3 +77,59 @@ function append_binary_digit_to_left_end_of_binary_digit_sequence_no_longer_than
 	}
 }
 
+function append_binary_digit_zero_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits() {
+	try {
+		append_binary_digit_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits(0);
+	}
+	catch(error) {
+		console.log("An error during the runtime of append_binary_digit_zero_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits(): " + error);
+	}
+}
+
+function append_binary_digit_one_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits() {
+	try {
+		append_binary_digit_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits(1);
+	}
+	catch(error) {
+		console.log("An error during the runtime of append_binary_digit_one_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits(): " + error);
+	}
+}
+
+function append_random_binary_digit_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits() {
+	try {
+		let random_binary_digit = 0;
+		random_binary_digit = generate_random_binary_digit();
+		append_binary_digit_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits(random_binary_digit);
+	}
+	catch(error) {
+		console.log("An error during the runtime of append_random_binary_digit_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits(): " + error);
+	}
+}
+
+function A() {
+	try {
+		append_random_binary_digit_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits(0);
+	}
+	catch(error) {
+		console.log("An error during the runtime of A(): " + error);
+	}
+}
+
+function B() {
+	try {
+		append_random_binary_digit_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits(1);
+	}
+	catch(error) {
+		console.log("An error during the runtime of B(): " + error);
+	}
+}
+
+function C() {
+	try {
+		append_random_binary_digit_to_left_end_of_binary_digit_sequence_no_longer_than_eight_digits();
+	}
+	catch(error) {
+		console.log("An error during the runtime of C(): " + error);
+	}
+}
+

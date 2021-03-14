@@ -25,7 +25,21 @@ function random_binary_term() {
 }
 
 function validate_binary_term_array(input) {
-	
+	try {
+		let index = 0;
+		if (arguments.length !== 1) throw "Exactly one function argument is required.";
+		if (typeof arguments[0] !== "object") throw "input must be an Object type datum.";
+		if (input.length !== 8) throw "input must be an array of exactly eight elements.";
+		for (index = 0; index < 7; index++) {
+			if (typeof input[index] !== "number") throw "Each element of the input array must be a Number type datum.";
+			if ((input[index] !== 0) && (input[index] !== 1)) throw "Each element of the input array must either be 0 or else 1.";
+		}
+		return true;
+	}
+	catch(error) {
+		console.log("error: " + error);
+		return false;
+	}
 }
 
 function extract_binary_term_array_from_interface() {

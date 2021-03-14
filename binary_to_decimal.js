@@ -61,12 +61,20 @@ function validate_binary_term_string(input) {
 	}
 }
 
+/**
+ * Get the current value inside of the text input field whose identifier is "binary term input field" on the web page interface, binary_to_decimal.html.
+ * If that value is NOT a valid binary term string, then replace that value with a random binary term string.
+ * Update the static text element whose identifier is "binary term display span" on the web page interface, binary_to_decimal.html
+ */
 function extract_binary_term_string_from_interface() {
 	try {
-		let binary_term_array = [], index = 0, binary_term_string = "", binary_term_display = {};
+		let binary_term_array = [], index = 0, binary_term_string = "", binary_term_display = {}, binary_term_input_field = {};
 		binary_term_display = document.getElementById("binary_term_display");
-		binary_term_string = binary_term_display.value;
-		binary_term_string = validate_binary_term_string(binary_term_string) ? binary_term_string : "00000000"
+		binary_term_input_field = document.getElementById("binary_term_input_field");
+		binary_term_string = binary_term_input_field.value;
+		binary_term_string = validate_binary_term_string(binary_term_string) ? binary_term_string : random_binary_term_string();
+		binary_term_display.value = binary_term_string;
+		binary_term_display.innerHTML = binary_term_string;
 	}
 	catch(error) {
 		console.log("An error occurred during the runtime of extract_binary_term_string_from_interface(): " + error);

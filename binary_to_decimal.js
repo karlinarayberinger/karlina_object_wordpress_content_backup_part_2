@@ -7,6 +7,7 @@
  */
 
 /**
+ * Generate a random number which is an element of the set [0,1).
  * @return {Number} a real number in base-ten which is no smaller than zero and less than one.
  */
 function random_nonnegative_real_number() {
@@ -14,6 +15,7 @@ function random_nonnegative_real_number() {
 }
 
 /**
+ * Generate a random integer which is an element of the set [0,100).
  * @return {Number} a real number in base-ten which is no smaller than zero and less than one hundred.
  */
 function random_nonnegative_integer() {
@@ -38,6 +40,10 @@ function random_binary_term_string() {
 	return binary_term_string;
 }
 
+/**
+ * Determine whether or not input represents a valid BinarY TErm (BYTE) string.
+ * @return {Boolean} true if input is a String whose length is exactly eight tokens and where each token is either '0' or else '1'; false otherwise.
+ */
 function validate_binary_term_string(input) {
 	try {
 		let index = 0;
@@ -45,8 +51,7 @@ function validate_binary_term_string(input) {
 		if (typeof arguments[0] !== "string") throw "input must be an String type datum.";
 		if (input.length !== 8) throw "input must be a sequence of exactly eight elements.";
 		for (index = 0; index < 7; index++) {
-			if (typeof input[index] !== "number") throw "Each element of the input string must be a Number type datum.";
-			if ((input[index] !== 0) && (input[index] !== 1)) throw "Each element of the input string must either be 0 or else 1.";
+			if ((input[index] !== '0') && (input[index] !== '1')) throw "Each element of the input string must either be 0 or else 1.";
 		}
 		return true;
 	}

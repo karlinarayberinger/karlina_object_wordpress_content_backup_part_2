@@ -28,9 +28,13 @@ function random_binary_digit() {
 	return ((random_nonnegative_integer() % 2) === 0) ? 0 : 1;
 }
 
+/**
+ * Randomly select exactly eight BInary digiTs (BIT) to store as a BinarY TErm (BYTE) string.
+ * @return {String} a sequence of exactly eight binary digits (where each binary digit is either '0' or else '1').
+ */
 function random_binary_term_string() {
 	let binary_term_string = "", index = 0;
-	for (index = 0; index < 7; index +=1) binary_term_string.push(random_binary_digit());
+	for (index = 0; index < 7; index +=1) binary_term_string += random_binary_digit();
 	return binary_term_string;
 }
 

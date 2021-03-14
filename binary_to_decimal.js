@@ -7,7 +7,6 @@
  */
 
 /**
- * Use the native JavaScript Math library function, Math.random(), to produce exactly one random number.
  * @return {Number} a real number in base-ten which is no smaller than zero and less than one.
  */
 function random_nonnegative_real_number() {
@@ -15,8 +14,6 @@ function random_nonnegative_real_number() {
 }
 
 /**
- * Use the previously defined JavaScript function, random_nonnegative_real_number(), to produce exactly one random number.
- * Use the native JavaScript Math library function, Math.floor(), to round that random number down to the nearest whole number.
  * @return {Number} a real number in base-ten which is no smaller than zero and less than one hundred.
  */
 function random_nonnegative_integer() {
@@ -24,8 +21,7 @@ function random_nonnegative_integer() {
 }
 
 /**
- * Use the previously defined JavaScript function, random_nonnegative_integer(), to produce exactly one random nonnegative base-ten integer.
- * Use the modulo operator to get the remainder (either 0 or else 1) of the random nonnegative base-ten integer divided by two.
+ * Use the modulo operator to get the remainder (either 0 or else 1) of some random nonnegative base-ten integer divided by two.
  * @return {Number} a real number in base-ten which is either zero or else one.
  */
 function random_binary_digit() {

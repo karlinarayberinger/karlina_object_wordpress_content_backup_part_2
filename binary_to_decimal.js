@@ -64,7 +64,7 @@ function validate_binary_term_string(input) {
 /**
  * Get the current value inside of the text input field whose identifier is "binary term input field" on the web page interface, binary_to_decimal.html.
  * If that value is NOT a valid binary term string, then replace that value with a random binary term string.
- * Update the static text element whose identifier is "binary term display span" on the web page interface, binary_to_decimal.html
+ * Update the static text element whose identifier is "binary term display" on the web page interface, binary_to_decimal.html
  */
 function extract_binary_term_string_from_interface() {
 	try {
